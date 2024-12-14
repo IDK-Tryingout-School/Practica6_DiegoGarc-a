@@ -1,0 +1,50 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: blue;
+}
+
+.contenedor{
+    padding: 10rem;
+    margin-top: 5rem;
+}
+
+h1{
+    color: rgb(189, 232, 80);
+    font-size: 6rem;
+    background-color: blue;
+}
+
+h1 span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background-color: rgb(25,0,255);
+    border-left: 5px solid black;
+    animation: escribir 8s steps(30) infinite alternate;
+}
+
+@keyframes escribir{
+    from {width: 100%;}
+    to {width: 10%;}
+}
+
+.GALERIA{
+    display: flex;
+    width: 500px;
+    height: 500px;
+}
+
+.GALERIA img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover; /*scale-down unset*/
+    filter: brightness(70%);
+    transition: .9s ease;
+}
+
+.GALERIA img:hover{
+    cursor: zoom-in;
+    width: 1000px;
+    opacity: 1;
+    filter: brightness(150%)
+}
